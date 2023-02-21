@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="hhtp://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="/saveitem" method="post">
+    <label>Item id</label>
+    <input type="number" name="itemid" required="true"><br>
+    <label>Item name</label>
+    <input type="text" name="itemname" required="true"><br>
+    <label>Item price</label>
+    <input type="number" name="itemprice" required="true"><br>
+    <label>Item brand</label>
+    <input type="text" name="brand" required="true"><br>
+    <label>Keyword</label>
+    <input type="text" name="keyword" required="true"><br>
+    <button type="submit">Save item</button>
+</form>
+
+
+</body>
+</html>

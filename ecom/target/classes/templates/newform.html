@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="hhtp://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<form action="/search" method="post" >
+    <input type="text" name="keyword" required="true" >
+     <button type="submit">Search</button>
+
+</form>
+
+      
+      
+     <table>
+      	<tr>
+      		<th> ID </th>
+      		<th> Name </th>.
+      		<th> Price </th>
+      		<th> Brand </th>
+      		<th> Add to cart </th>
+      		<th> Order item </th>
+      	 </tr>
+      	 
+      	 <tr th:each="item :${lists}">
+      	 <td th:text="${item.itemid}"></td>
+      	 	<td th:text="${item.itemname}"></td>
+      	 	<td th:text="${item.itemprice}"></td>
+      	 	<td th:text="${item.brand}"></td>
+      	 	<td>
+      	 		<a th:href="@{/whishlist/{id}(id=${item.itemid})}">
+      	 		Click here</a>
+      	 	</td>
+      	 	<td>
+      	 		<a th:href="@{/ordereditems/{id}(id=${item.itemid})}">
+      	 		Click here</a>
+      	 	</td>
+      	 	
+      	 	
+      	 </tr>
+      </table>
+      
+      <a href="/myitems"> My carts and Items</a><br>
+      <a href="/getsaveitempage"> Save items</a><br>
+      <a href="/logout">Logout</a>
+
+
+</body>
+</html>
